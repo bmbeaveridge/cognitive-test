@@ -18,7 +18,7 @@ public class QuestionsTester {
 	public void testQuestionBuilder() throws Exception {
 		String questionJsonString = new String();
 		try {
-			questionJsonString = JSONWorker.readFile("questions.json");
+			questionJsonString = JSONWorker.getJSONString("https://magic-eat-ball.googlecode.com/hg/questions.json");
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
