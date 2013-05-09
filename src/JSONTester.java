@@ -27,7 +27,7 @@ public class JSONTester {
 	@After
 	public void tearDown() throws Exception {
 	}
-
+	
 	@Test
 	public void testResultBuilder() {
 		String testURL = "http://api.yelp.com/v2/search?term=mexican+restaurant,food&location=93101&radius_filter=10000";

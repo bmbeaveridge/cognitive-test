@@ -17,17 +17,14 @@ public class QuestionsTester {
 	@Test
 	public void testQuestionBuilder() throws Exception {
 		String questionJsonString = new String();
-		try {
-			questionJsonString = JSONWorker.getJSONString("https://magic-eat-ball.googlecode.com/hg/questions.json");
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		questionJsonString = JSONWorker.readFile("questions.json");
+		
 		Question q;
 		int i=0;
 		JsonElement jse = JSONWorker.getJSONElementFromString(questionJsonString);
 		JsonElement tempjse = jse.getAsJsonObject().get("questions").getAsJsonObject().get("category").getAsJsonArray().get(i);
-		q = QuestionBuilder.getQuestion(tempjse);
+		QuestionBuilder qb = new QuestionBuilder();
+		q = qb.getQuestion(tempjse);
 		
 		System.out.println(q.getText());
 		System.out.println(q.getCount());
