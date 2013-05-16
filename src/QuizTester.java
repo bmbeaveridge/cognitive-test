@@ -13,7 +13,7 @@ import com.quantumoctopus.magiceatball.YelpURLSigner;
 
 public class QuizTester {
 
-	// @Test
+	 @Test
 	public void testQuizURLBuilder() {
 		QuizManager q = new QuizManager();
 		q.setLl("34.406113,-119.697332");

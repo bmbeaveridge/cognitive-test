@@ -39,7 +39,7 @@ public class JSONTester {
 		}
 	}
 
-//	@Test
+	@Test
 	public void testNumResults() {
 		String testURL = "http://api.yelp.com/v2/search?term=restaurant,food&ll=34.425958581828425,-119.88632478962093&sort=1&radius_filter=2000";
 		String signedURL = YelpURLSigner.getURLString(testURL);
@@ -49,7 +49,7 @@ public class JSONTester {
 		Assert.assertNotNull(numResults);
 	}
 
-//	@Test
+	@Test
 	public void testAppendJsonArray() {
 		JsonArray tempjsa = new JsonArray();
 		String testURL = "http://api.yelp.com/v2/search?term=mexican+restaurant,food&location=93101&radius_filter=10000";
@@ -66,7 +66,7 @@ public class JSONTester {
 		System.out.println(jso.toString());
 	}
 	
-//	@Test
+	@Test
 	public void testGetResultByID(){
 		String id = "el-sitio-santa-barbara";
 		Result r = ResultsWorker.getResultByID(id);
