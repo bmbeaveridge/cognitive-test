@@ -2,9 +2,6 @@ import static org.junit.Assert.*;
 
 import java.io.IOException;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
