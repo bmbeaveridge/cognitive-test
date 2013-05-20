@@ -13,14 +13,17 @@ import com.quantumoctopus.magiceatball.YelpURLSigner;
 
 public class QuizTester {
 
-	 @Test
+	@Test
 	public void testQuizURLBuilder() {
 		QuizManager q = new QuizManager();
 		q.setLl("34.406113,-119.697332");
 		q.setCategory_filter("burgers");
 		q.setRadius_filter("2000");
 		q.setSort("1");
-		q.setSearchParameters();
+		q.addCategory();
+		q.addLocation();
+		q.addRadius();
+		q.addSort();
 		String URL = new String();
 		URL = q.getURL();
 		System.out.println(URL);
