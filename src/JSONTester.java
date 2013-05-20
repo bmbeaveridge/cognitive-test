@@ -64,6 +64,7 @@ public class JSONTester {
 
 		jso.add("log", tempjsa);
 		System.out.println(jso.toString());
+		Assert.assertNotNull(jso);
 	}
 	
 	@Test
@@ -72,6 +73,7 @@ public class JSONTester {
 		Result r = ResultsWorker.getResultByID(id);
 		System.out.println(r.getUrl());
 		System.out.println(r.getName());
+		Assert.assertNotNull(r);
 	}
 
 	public JsonArray addToLog(JsonArray jsa, Result r) {
@@ -79,6 +81,7 @@ public class JSONTester {
 		jso.addProperty("name", r.getName());
 		jso.addProperty("id", r.getId());
 		jsa.add(jso);
+		Assert.assertNotNull(jsa);
 		return jsa;
 	}
 }
