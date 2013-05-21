@@ -1,3 +1,4 @@
+package tester;
 import static org.junit.Assert.*;
 
 import java.io.IOException;
@@ -75,6 +76,16 @@ public class JSONTester {
 		System.out.println(r.getName());
 		Assert.assertNotNull(r);
 	}
+	
+	@Test
+	public void testGetPrice(){
+		String id = "el-sitio-santa-barbara";
+		Result r = ResultsWorker.getResultByID(id);
+		int p=ResultsWorker.getPrice(r.getUrl());
+		Assert.assertEquals(1, p);
+	}
+	
+	
 
 	public JsonArray addToLog(JsonArray jsa, Result r) {
 		JsonObject jso = new JsonObject();
